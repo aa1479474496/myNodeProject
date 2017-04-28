@@ -4,12 +4,16 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import 'bootstrap'
+import './assets/css/bootstrap.min.css'
+import './assets/css/main.css'
+
+import api from './api/index'
+Vue.prototype.api = api;
+
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  template: '<App/>',
-  components: { App }
-})
+    router: router,
+    render: h => h(App)
+}).$mount('#app');
