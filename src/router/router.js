@@ -6,9 +6,21 @@ Vue.use(Router)
 
 const routes = [{
     path: '/',
-    name: 'home',
+    name: 'login',
     component(resolve) {
-        require(['./../components/home/home.vue'], resolve)
+        require(['./../components/login/login.vue'], resolve)
+    }
+}, {
+    path: '/layout',
+    name: 'layout',
+    component(resolve) {
+        require(['./../components/layout/layout.vue'], resolve)
+    }
+}, {
+    path: '/login1',
+    name: 'login1',
+    component(resolve) {
+        require(['./../components/login/login.1.vue'], resolve)
     }
 }]
 

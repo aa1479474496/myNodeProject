@@ -33,8 +33,12 @@ body {
     height: 100%;
     color: #333;
 }
+
 .mt18 {
     margin-top: 18px;
+}
+#app {
+    height: 100%;
 }
 
 /*body {
@@ -42,10 +46,36 @@ body {
     background-size: cover;
 }*/
 
+@media (min-width: 741px) {
+    .index-main {
+        text-align: center;
+        white-space: nowrap;
+        height: 100%;
+        min-height: 720px;
+    }
+    .index-main:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -.25em;
+    }
+    .index-main-body {
+        padding: 0;
+        min-height: 400px;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        white-space: normal;
+    }
+}
+
+.index-main {
+    min-height: 100%;
+}
+
 .index-main-body {
     width: 300px;
-    height: 590px;
-    /*border: 1px solid red;*/
     margin: auto;
 }
 
@@ -114,6 +144,7 @@ body {
     width: 100%;
     line-height: 19px;
     color: #555;
+    position: relative;
 }
 
 .sign-button {
@@ -124,11 +155,39 @@ body {
     line-height: 41px;
     color: #fff;
     text-align: center;
-    text-shadow: 0 1px 1px rgba(0,0,0,.2);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
     font-size: 15px;
     cursor: pointer;
 }
 
 .sign-button:hover {
     background: #55abed;
+}
+ label.errorLable.is-visible {
+    visibility: visible;
+    opacity: 1;
+    -ms-filter: "alpha(Opacity=100)";
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+}
+label.errorLable {
+    position: absolute;
+    top: 0;
+    right: 8px;
+    padding: 0 8px;
+    line-height: 48px;
+    color: #c33;
+    cursor: text;
+    background: #fff;
+    background: -webkit-linear-gradient(left,rgba(255,255,255,0),#fff 8px);
+    background: linear-gradient(to right,rgba(255,255,255,0),#fff 8px);
+    visibility: hidden;
+    opacity: 0;
+    -ms-filter: "alpha(Opacity=0)";
+    -webkit-transform: translate(20px,0);
+    -ms-transform: translate(20px,0);
+    transform: translate(20px,0);
+    -webkit-transition: .25s ease-out;
+    transition: .25s ease-out;
 }
