@@ -6,10 +6,16 @@ reClass.install = function(Vue, options) {
             var vm = vnode.context;
             
             el.addEventListener('click', function(e) {
-                var label = el.getElementsByClassName('is-visible');
+                var label = el.getElementsByTagName('label');
                 var len = label.length;
-                len && removeClass(label[0], 'is-visible');
-                e.preventDefault();
+                // len && removeClass(label[0], 'is-visible');
+                // e.preventDefault();
+                if(len) {
+                    vnode.context.$set(vnode.context.errorFiled,'phone','');
+                    console.log(vnode.context.errorFiled);
+                    e.preventDefault();
+                    // el.removeChild(label[0]);
+                }
                 
             })
         }
