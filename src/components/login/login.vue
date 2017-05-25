@@ -69,7 +69,7 @@ export default {
             }
         }
     },
-    mixins: [ myMixin ],
+    mixins: [myMixin],
     mounted() {
     },
     methods: {
@@ -88,9 +88,13 @@ export default {
             }
         },
         params() {
+            // var o = {
+            //     'freeChars10': this.form.userName,
+            //     'phone': this.form.userPhone,
+            //     'password': this.form.userPassword
+            // }
             var o = {
                 'freeChars10': this.form.userName,
-                'phone': this.form.userPhone,
                 'password': this.form.userPassword
             }
             return o;
@@ -98,6 +102,15 @@ export default {
         registerUser() {
             var flag = this.checkAll(this.params());
             console.log('flag:' + flag);
+            if (!flag) return;
+            this.api.reg({
+                name: this.form.userName,
+                password: this.form.userPassword
+            }).then(data => {
+                console.log(data);
+            }, err => {
+                console.log(err);
+            })
         }
         // registerUser() {
         //     this.api.testPost({ userName: this.form.userName, userPhone: this.form.userPhone, userPassword: this.form.userPassword }).then(response => {

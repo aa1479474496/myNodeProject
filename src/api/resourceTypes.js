@@ -1,4 +1,5 @@
 export default {
     TEST: 'test',
-    TEST_POST: 'testPost'
+    TEST_POST: 'testPost',
+    REG: '/api/reg'
 }

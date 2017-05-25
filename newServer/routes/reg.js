@@ -8,9 +8,11 @@ const moment = require('moment');
 
 // 用户注册
 let reg = (req, res, next) => {
+
     if (!req.body.name || !req.body.password) {
-        res.json({ 
-            code: -200, msg: '请输入您的账号密码.' 
+        res.json({
+            code: -200,
+            msg: '请输入您的账号密码.'
         });
     }
     const { name, password } = req.body;
@@ -24,8 +26,9 @@ let reg = (req, res, next) => {
         name: name
     }).then(data => {
         if (data) {
-            res.json({ 
-                code: -200, msg: '该账号已注册' 
+            res.json({
+                code: -200,
+                msg: '该账号已注册'
             });
         } else {
             user.save((err, data) => {

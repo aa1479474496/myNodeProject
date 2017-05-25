@@ -10,5 +10,8 @@ export default {
     },
     testPost(data) {
         return Vue.axios.post(res.TEST_POST,data)
+    },
+    reg(params) {
+        return Vue.axios.post(res.REG, params)
     }
 }
