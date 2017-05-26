@@ -110,7 +110,9 @@ export default {
                 console.log(data);
             }, err => {
                 console.log(err);
-            })
+            });
+
+
         }
         // registerUser() {
         //     this.api.testPost({ userName: this.form.userName, userPhone: this.form.userPhone, userPassword: this.form.userPassword }).then(response => {
