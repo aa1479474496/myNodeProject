@@ -1,6 +1,6 @@
 # mynodeproject
 
-> A Vue.js project
+>A project that uses node and Vue
 
 ## Build Setup
 
