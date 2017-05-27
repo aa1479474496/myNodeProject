@@ -41,6 +41,13 @@ const routes = [{
             component(resolve) {
                 require(['./../components/admin/articleList.vue'], resolve)
             },
+        },
+        {
+            path: 'loginSuccess',
+            name: 'loginSuccess',
+            component(resolve) {
+                require(['./../components/admin/loginSuccess.vue'], resolve)
+            },
         }
 
     ]

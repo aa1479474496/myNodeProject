@@ -1,5 +1,6 @@
 export default {
     TEST: 'test',
     TEST_POST: 'testPost',
-    REG: '/users/reg'
+    REG: '/users/reg',
+    LOGIN: '/users/login'
 }

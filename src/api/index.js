@@ -13,5 +13,8 @@ export default {
     },
     reg(params) {
         return Vue.axios.post(res.REG, params)
+    },
+    login(params) {
+        return Vue.axios.post(res.LOGIN, params)
     }
 }
