@@ -4,24 +4,46 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
+// const routes = [{
+//     path: '/',
+//     name: 'login',
+//     component(resolve) {
+//         require(['./../components/login/login.vue'], resolve)
+//     }
+// }, {
+//     path: '/layout',
+//     name: 'layout',
+//     component(resolve) {
+//         require(['./../components/layout/layout.vue'], resolve)
+//     }
+// }, {
+//     path: '/login1',
+//     name: 'login1',
+//     component(resolve) {
+//         require(['./../components/login/login.1.vue'], resolve)
+//    
+// }]
 const routes = [{
     path: '/',
-    name: 'login',
+    name: 'loginIndex',
     component(resolve) {
-        require(['./../components/login/login.vue'], resolve)
+        require(['./../components/login/index.vue'], resolve)
     }
 }, {
-    path: '/layout',
-    name: 'layout',
+    path: '/admin',
+    name: 'admin',
     component(resolve) {
-        require(['./../components/layout/layout.vue'], resolve)
-    }
-}, {
-    path: '/login1',
-    name: 'login1',
-    component(resolve) {
-        require(['./../components/login/login.1.vue'], resolve)
-    }
+        require(['./../components/admin/admin.vue'], resolve)
+    },
+    children: [{
+            path: '',
+            name: 'adminInfo',
+            component(resolve) {
+                require(['./../components/admin/articleList.vue'], resolve)
+            },
+        }
+
+    ]
 }]
 
 
