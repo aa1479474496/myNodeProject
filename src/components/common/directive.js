@@ -106,7 +106,12 @@ reClass.install = function(Vue, options) {
                 else {
                     throw '验证不通过';
                 }
-            })
+            });
+
+
+            // window.onresize = function() {
+            //     console.log($(window).height());
+            // }
 
         }
 

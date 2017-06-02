@@ -30,6 +30,18 @@ const routes = [{
         require(['./../components/login/index.vue'], resolve)
     }
 }, {
+    path: '/flex',
+    name: 'flex',
+    component(resolve) {
+        require(['./../components/admin/flex.vue'], resolve)
+    }
+}, {
+    path: '/flex2',
+    name: 'flex2',
+    component(resolve) {
+        require(['./../components/admin/flex2.vue'], resolve)
+    }
+}, {
     path: '/admin',
     name: 'admin',
     component(resolve) {
