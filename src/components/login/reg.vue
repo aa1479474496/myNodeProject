@@ -12,10 +12,10 @@
             <div class="input-wrapper">
                 <input type="text" v-model="form.userPhone" placeholder="手机号（仅支持中国大陆）">
                 <!--<transition name="slide-fade">
-                            <label v-show="check('phone', form.userPhone) === false || errorFiled.phone == 'phone'" class="errorLable">
-                                请输入正确的手机号
-                            </label>
-                        </transition>-->
+                                  <label v-show="check('phone', form.userPhone) === false || errorFiled.phone == 'phone'" class="errorLable">
+                                      请输入正确的手机号
+                                  </label>
+                              </transition>-->
             </div>
             <div class="input-wrapper">
                 <input type="password" class="myCheck" :data-model='form.userPassword' data-errorName="passwordError,password" v-ck:password="form.userPassword" v-model="form.userPassword" placeholder="密码6-20位数字,字母或符号两种以上组合">
@@ -44,7 +44,7 @@ export default {
     mounted() {
     },
     methods: {
-       //验证通过的回调函数
+        //验证通过的回调函数
         checkSumbit() {
             this.api.reg({
                 name: this.form.userName,

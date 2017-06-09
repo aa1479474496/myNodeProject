@@ -18,6 +18,7 @@ let login = (req, res, next) => {
         if (data && password == data.password) {
             return res.json({
                 code: 200,
+                name: name,
                 token: createToken(name)
             })
         } else {

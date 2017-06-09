@@ -43,7 +43,6 @@ const routes = [{
     }
 }, {
     path: '/admin',
-    name: 'admin',
     component(resolve) {
         require(['./../components/admin/admin.vue'], resolve)
     },

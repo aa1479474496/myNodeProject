@@ -38,53 +38,30 @@
                         <button type="submit" class="btn btn-default">Submit</button>
                     </form>
                     <a class="navbar-brand" href="#" style="padding-top:0;padding-bottom:0;">
-                        <div class="head-img-box">
-                            <img :src="headPortrait" alt="" class="head-img">
-                            <input type="file" class="rep" id="crop" name="crop" multiple @change="uploadImg">
-                        </div>
+                        <!--<img src="../../assets/img/qsLogo.jpg" width="50" height="50" style="border-radius:50%;" alt="">-->
+                        <el-upload class="avatar-uploader" action="https://jsonplaceholder.typicode.com/posts/" :show-file-list="false" :on-success="handleAvatarSuccess" :before-upload="beforeAvatarUpload">
+                            <img v-if="imageUrl" :src="imageUrl" class="avatar">
+                            <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+                        </el-upload>
                     </a>
                 </div>
             </div>
         </nav>
-        <!--<div class="menueditImg">
-                <input type="file" id="upload" class="rep" name="file1111" multiple @change="addPhotos($event)">
-            </div>-->
-        <div class="crop-mask" v-show="isUpLoad">
-            <div class="test">
-                <vueCropper ref="cropper" :img="option.img" :outputSize="option.size" :outputType="option.outputType" :info="true"></vueCropper>
+        <form action="http://localhost:3030/users/upload" method="POST" enctype="multipart/form-data">
+            <div class="menueditImg">
+                <input type="file" id="upload" name="photos" multiple>
             </div>
-            <div class="text-center">
-                <div class="save-btn" @click="startCrop">开始截图</div>
-                <div class="save-btn" @click="finish">保存</div>
-                <div class="save-btn" @click="cancel">取消</div>
-            </div>
-    
-        </div>
-        <!--<div class="menueditImg">
-                    <input type="file" class="rep" id="crop" name="crop" multiple @change="uploadImg">
-            
-                </div>-->
+            <input type="submit" value="提交">
+        </form>
     
     </div>
 </template>
 <script>
-import vueCropper from 'vue-cropper'
 export default {
     data() {
         return {
-            imageUrl: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100',
-            option: {
-                img: '',
-                size: 0.8,
-                outputType: 'jpeg'
-            },
-            crap: false,
-            headPortrait: 'http://localhost:3030/public/default/head.png',
-            isUpLoad: false
+            imageUrl: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'
         };
-    },
-    components: {
-        vueCropper
     },
     methods: {
         handleAvatarSuccess(res, file) {
@@ -104,80 +81,62 @@ export default {
         },
 
         addPhotos(obj) {
+            // var val = $(obj.target).val();
+            // console.log(val);
+
             var self = this;
             var aId = $(obj.target).attr('id');
             var fileObj = document.getElementById(aId).files;
             var formda = new FormData();
+            formda.append("file", fileObj[0]);
 
-            let fileObjLen = fileObj.length;
-            for (let i = 0; i < fileObjLen; i++) {
-                formda.append("file", fileObj[i]);
-            }
+            // let fileObjLen = fileObj.length;
+            // for (let i = 0; i < fileObjLen; i++) {
+            //    form.append("file" + i, fileObj[i]);
+            // }
+            // $.ajax({
+            //         url: '/api/users/upload',
+            //         type: 'POST',
+            //         body:formda,
+            //         contentType: false,
+            //         processData: false,
+            //         success: function (returndata) {
+            //             console.log(returndata);
+            //         },
+            //         error: function (returndata) {
+            //             console.log(returndata);
+            //         }
+            //     });
 
-            console.log('formda:', formda);
             $.ajax({
-                url: '/api/users/upload',
+                url: '/api/photos/upload',
                 type: 'POST',
-                data: formda,
+                body: formda,
                 contentType: false,
                 processData: false,
                 success: function (returndata) {
                     console.log(returndata);
-
                 },
                 error: function (returndata) {
                     console.log(returndata);
                 }
             });
 
-        },
-        uploadImg(e) {
-            //上传头像
-            // this.option.img
-            var file = e.target.files[0]
-            if (!file) return;
-            this.isUpLoad = true
-            if (!/\.(gif|jpg|jpeg|png|bmp|GIF|JPG|PNG)$/.test(e.target.value)) {
-                alert('图片类型必须是.gif,jpeg,jpg,png,bmp中的一种')
-                return false
-            }
-            var reader = new FileReader()
-            reader.onload = (e) => {
-                this.option.img = e.target.result
-            }
-            reader.readAsDataURL(file)
-        },
-        startCrop() {
-            // 开始截图
-            this.crap = true
-            this.$refs.cropper.startCrop()
-        },
-        finish() {
-            //截图完成 上传
-            let baseInfo = this.$refs.cropper.getCropDate();
-            this.isUpLoad = false;
-            this.api.headPortrait({
-                headPortraitSrc: baseInfo
-            }).then(data => {
-                console.log(data);
-                this.headPortrait = data.src;
-                document.getElementById('crop').value = '';
-                console.log(data.src);
+            // this.api.upload({
+            //   d: form
+            // }).then(data => {
+            //    console.log(data);
+            //   // if (data.code == 200) {
+            //   //   console.log(data);
+            //   // }
+            //   // else {
+            //   //   console.log(data);
+            //   // }
 
-            }, err => {
-                console.log(33);
-            });
-            // console.log(baseInfo);
-        },
-        cancel() {
-            //取消截图
-            this.crap = false
-			this.$refs.cropper.stopCrop()
-            this.$refs.cropper.clearCrop()
-            document.getElementById('crop').value = '';
-            this.isUpLoad = false;
+            // }, err => {
+            //   console.log(33);
+            // });
         }
-
     }
 }
 </script>
@@ -225,21 +184,7 @@ input[type=file].el-upload__input {
     margin: 10px auto;
 }
 
-.head-img-box {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-}
-
-.head-img-box .head-img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    border-radius: 50%;
-}
-
-input[type="file"].rep {
+.menueditImg input[type="file"] {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -248,39 +193,5 @@ input[type="file"].rep {
     left: 0;
     opacity: 0;
     filter: alpha(opacity=0);
-}
-
-.crop-mask {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, .3);
-}
-
-.test {
-    width: 200px;
-    height: 200px;
-    margin: 80px auto 10px;
-}
-
-.save-btn {
-    display: inline-block;
-    font-size: 14px;
-    padding: 5px 18px;
-    border-radius: 6px;
-    background: #FFA900;
-    color: #fff;
-    cursor: pointer;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -khtml-user-select: none;
-    user-select: none;
-}
-
-.save-btn:hover {
-    background: #ff8200;
 }
 </style>

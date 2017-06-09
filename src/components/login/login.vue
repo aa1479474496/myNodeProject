@@ -37,14 +37,17 @@ export default {
     mounted() {
     },
     methods: {
-       //验证通过的回调函数
+        //验证通过的回调函数
         checkSumbit() {
             this.api.login({
                 name: this.form.userName,
                 password: this.form.userPassword
             }).then(data => {
                 if (data.code == 200) {
+                    console.log(data);
+                    // localStorage.setItem('username', data.name)
                     this.$router.replace({ path: '/admin' })
+
                 }
                 else {
                     this.$message.error({ showClose: true, message: data.msg });

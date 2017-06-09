@@ -16,5 +16,11 @@ export default {
     },
     login(params) {
         return Vue.axios.post(res.LOGIN, params)
+    },
+    upload(params) {
+        return Vue.axios.post(res.UPLOAD, params)
+    },
+    headPortrait(params) {
+        return Vue.axios.post(res.HEADPORTRAIT, params)
     }
 }

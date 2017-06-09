@@ -37,9 +37,11 @@ body {
 .mt18 {
     margin-top: 18px;
 }
+
 #app {
     height: 100%;
 }
+
 
 /*body {
     background: url(../img/bg.jpg) no-repeat center;
@@ -164,7 +166,9 @@ body {
 .sign-button:hover {
     background: #55abed;
 }
- /*label.errorLable.is-visible {
+
+
+/*label.errorLable.is-visible {
     visibility: visible;
     opacity: 1;
     -ms-filter: "alpha(Opacity=100)";
@@ -202,17 +206,20 @@ label.errorLable {
     color: #c33;
     cursor: text;
     background: #fff;
-    background: -webkit-linear-gradient(left,rgba(255,255,255,0),#fff 8px);
-    background: linear-gradient(to right,rgba(255,255,255,0),#fff 8px);
-    
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), #fff 8px);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff 8px);
 }
+
 .slide-fade-enter-active {
-  transition: all .3s ease;
+    transition: all .3s ease;
 }
+
 .slide-fade-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
-.slide-fade-enter, .slide-fade-leave-active {
-  transform: translateX(10px);
-  opacity: 0;
+
+.slide-fade-enter,
+.slide-fade-leave-active {
+    transform: translateX(10px);
+    opacity: 0;
 }

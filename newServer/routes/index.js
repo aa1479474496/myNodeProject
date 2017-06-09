@@ -4,4 +4,5 @@ module.exports = function(app) {
     });
     app.use('/users', require('./reg.js'));
     app.use('/users', require('./login.js'));
+    app.use('/users', require('./upload.js'));
 }
