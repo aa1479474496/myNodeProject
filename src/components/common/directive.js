@@ -67,15 +67,15 @@ reClass.install = function(Vue, options) {
     Vue.directive('ck', {
         update(el, binding, vnode) {
             let vm = vnode.context,
-                 reg = binding.arg,
+                reg = binding.arg,
                 name = binding.name,
                 expression = binding.expression,
                 value = binding.value,
-                 errorArr = $(el).attr('data-errorName');
+                errorArr = $(el).attr('data-errorName');
             if (errorArr == undefined) {
                 throw "请传入正确的data-errorName";
             }
-            if(value) {
+            if (value) {
                 check(el, errorArr, value, vm);
             }
         }
@@ -84,7 +84,7 @@ reClass.install = function(Vue, options) {
         bind: function(el, binding, vnode) {
             let vm = vnode.context;
             let reg = binding.arg;
-            
+
             $(el).on('click', function() {
                 let errcount = 0;
                 let list = $(this).parents('#' + reg).find('.myCheck');
@@ -102,8 +102,7 @@ reClass.install = function(Vue, options) {
                 });
                 if (errcount == 0) {
                     vm.checkSumbit();
-                }
-                else {
+                } else {
                     throw '验证不通过';
                 }
             });

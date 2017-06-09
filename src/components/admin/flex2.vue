@@ -2,28 +2,28 @@
     <div class="wrap">
         <div class="flex-title">标题测试</div>
         <div class="comment-list">
-           <div class="left-list">
-               <p>left</p>
-               <p>left</p>
-               <p>left</p>
-               <p>left</p>
-               <p>left</p>
-               <p>left</p>
-               <p>left</p>
-               <p>left</p>
-               <p>left</p>
-               <p>left</p>
-               <p>left</p>
-               <p>left</p>
-               <p>left</p>
-               <p>left</p>
-               <p>left</p>
-               <p>left</p>
-               <p>left</p>
-               <p>left</p>
-               <p>left</p>
-           </div>
-           <div class="right-list"></div>
+            <div class="left-list">
+                <p>left</p>
+                <p>left</p>
+                <p>left</p>
+                <p>left</p>
+                <p>left</p>
+                <p>left</p>
+                <p>left</p>
+                <p>left</p>
+                <p>left</p>
+                <p>left</p>
+                <p>left</p>
+                <p>left</p>
+                <p>left</p>
+                <p>left</p>
+                <p>left</p>
+                <p>left</p>
+                <p>left</p>
+                <p>left</p>
+                <p>left</p>
+            </div>
+            <div class="right-list"></div>
         </div>
         <div class="flex-title flex-bottom">底部</div>
     </div>
@@ -45,6 +45,7 @@
     line-height: 40px;
     font-size: 20px;
 }
+
 .flex-bottom {
     position: absolute;
     bottom: 0;
@@ -52,26 +53,28 @@
 
 .comment-list {
     width: 100%;
-   position: absolute;
-   top: 40px;
-   bottom: 40px;
+    position: absolute;
+    top: 40px;
+    bottom: 40px;
     padding: 10px;
     background: #ccc;
     overflow-x: hidden;
     overflow-y: hidden;
 }
+
 .left-list {
     width: 49%;
-   /*float: left;*/
-     height:100%;
-   display: inline-block;
+    /*float: left;*/
+    height: 100%;
+    display: inline-block;
     overflow-y: auto;
 }
+
 .right-list {
-     width: 49%;
-      display: inline-block;
-   /*float: right;*/
-     height:100%;
+    width: 49%;
+    display: inline-block;
+    /*float: right;*/
+    height: 100%;
 }
 </style>
 <script>
