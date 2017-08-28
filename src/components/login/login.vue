@@ -19,6 +19,22 @@
             </div>
         </div>
         <div class="sign-button mt18" v-ckAll:check-form>登录</div>
+    
+        <!--<ul id="example-2">
+            <template v-for="(item, index) in items">
+                <li v-if="index == 0" @click="test">
+                    有事件：{{ parentMessage }} - {{ index }} - {{ item.message }}
+                </li>
+                <li v-else>
+                    没有事件：{{ parentMessage }} - {{ index }} - {{ item.message }}
+                </li>
+            </template>
+    
+        </ul>-->
+        <!--<h1>a.name : {{a.name}}</h1>
+        <h1>a.age : {{a.age}}</h1>-->
+        <!--<h1>a.age : {{a.num}}</h1>-->
+    
     </div>
 </template>
 
@@ -26,17 +42,50 @@
 export default {
     data() {
         return {
+            items: [
+                { message: 'Foo' },
+                { message: 'Bar' }
+            ],
             errorFiled: {},
             form: {
                 userName: '',
                 userPhone: '',
                 userPassword: ''
-            }
+            },
+            // a: {
+            //     name: 'test'
+                
+            // },
+            a: {}
         }
     },
     mounted() {
+        var num = {
+            name: 'num',
+            age: 22
+        }
+        this.a = num;
+
+        var b = {};
+        console.log(b instanceof Object);
+        var c = null;
+        console.log(c instanceof Object);
+        
+
+       
+        // this.a.age = 18;
+        // this.$set(this.a,'age',22)
+        // var num = {
+        //     num: 123,
+        //     age: 55
+        // }
+        // this.a = Object.assign({}, this.a, num);
+        // console.log(this.a);
     },
     methods: {
+        test() {
+            alert(1)
+        },
         //验证通过的回调函数
         checkSumbit() {
             this.api.login({

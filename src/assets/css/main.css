@@ -223,3 +223,7 @@ label.errorLable {
     transform: translateX(10px);
     opacity: 0;
 }
+
+.box {
+    width: 100px;   
+}
