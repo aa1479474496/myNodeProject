@@ -62,6 +62,12 @@ const routes = [{
         }
 
     ]
+}, {
+    path: '/entrust',
+    name: 'entrust',
+    component(resolve) {
+        require(['./../components/mobile/entrust.vue'], resolve)
+    }
 }]
 
 
