@@ -68,6 +68,12 @@ const routes = [{
     component(resolve) {
         require(['./../components/mobile/entrust.vue'], resolve)
     }
+}, {
+    path: '/vtour',
+    name: 'vtour',
+    component(resolve) {
+        require(['./../components/mobile/vtour.vue'], resolve)
+    }
 }]
 
 

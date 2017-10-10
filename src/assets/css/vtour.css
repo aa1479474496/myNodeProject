@@ -1,0 +1,167 @@
+.index-mask {
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+}
+
+.vtour-back-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 7px;
+    height: 13px;
+    background: url(../img/vtour-back.png) no-repeat center;
+    background-size: contain;
+}
+
+.vtour-content {
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.vtour-header {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 17px;
+    color: #fff;
+}
+
+.vtour-back {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    font-size: 0;
+    text-align: center;
+    width: 38px;
+    height: 44px;
+    line-height: 44px;
+}
+
+.vtour-bar {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 25px;
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    font-size: 0;
+    text-align: center;
+}
+
+.hp-btn,
+.overall-btn,
+.threeD-btn,
+.plan-btn,
+.floor-btn {
+    display: inline-block;
+    margin: 0 15px;
+    width: 46px;
+    height: 46px;
+    vertical-align: middle;
+}
+
+.hp-btn {
+    background: url(../img/hp.png) no-repeat center;
+    background-size: contain;
+}
+
+.hp-btn.vtour-active {
+    background: url(../img/hp-active.png) no-repeat center;
+    background-size: contain;
+}
+
+.overall-btn {
+    background: url(../img/overall.png) no-repeat center;
+    background-size: contain;
+}
+
+.overall-btn.vtour-active {
+    background: url(../img/overall-active.png) no-repeat center;
+    background-size: contain;
+}
+
+.threeD-btn {
+    background: url(../img/threeD.png) no-repeat center;
+    background-size: contain;
+}
+
+.threeD-btn.vtour-active {
+    background: url(../img/threeD-active.png) no-repeat center;
+    background-size: contain;
+}
+
+.plan-btn {
+    background: url(../img/plan.png) no-repeat center;
+    background-size: contain;
+}
+
+.plan-btn.vtour-active {
+    background: url(../img/plan-active.png) no-repeat center;
+    background-size: contain;
+}
+
+.floor-btn {
+    background: url(../img/floor.png) no-repeat center;
+    background-size: contain;
+}
+
+.floor-btn.vtour-active {
+    background: url(../img/floor-active.png) no-repeat center;
+    background-size: contain;
+}
+
+.vtour-swipe-img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.overall-link,
+.hp-link,
+.threeD-link {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: -25px 0 0 -25px;
+    z-index: 1;
+}
+
+.overall-link {
+    background: url(../img/overall-link.png) no-repeat center;
+    background-size: contain;
+}
+
+.hp-link {
+    background: url(../img/hp-link.png) no-repeat center;
+    background-size: contain;
+}
+
+.threeD-link {
+    background: url(../img/threeD-link.png) no-repeat center;
+    background-size: contain;
+}
+
+.blur-img {
+    filter: blur(1px);
+}

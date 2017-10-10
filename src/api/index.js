@@ -9,7 +9,7 @@ export default {
         return Vue.axios.get(res.TEST)
     },
     testPost(data) {
-        return Vue.axios.post(res.TEST_POST,data)
+        return Vue.axios.post(res.TEST_POST, data)
     },
     reg(params) {
         return Vue.axios.post(res.REG, params)
@@ -22,5 +22,8 @@ export default {
     },
     headPortrait(params) {
         return Vue.axios.post(res.HEADPORTRAIT, params)
+    },
+    getVtourData(data) {
+        return Vue.axios.get(res.COMMON_VTOUR_DATA, { params: data })
     }
 }

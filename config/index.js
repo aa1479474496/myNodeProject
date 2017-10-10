@@ -27,12 +27,21 @@ module.exports = {
         autoOpenBrowser: true,
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
-        proxyTable: {
-            '/api': {
-                target: 'http://localhost:3030',
+        // proxyTable: {
+        //     '/api': {
+        //         target: 'http://localhost:3030',
+        //         changeOrigin: true,
+        //         pathRewrite: {
+        //             '^/api': ''
+        //         }
+        //     }
+        // },
+         proxyTable: {
+            '/appServer': {
+                 target: 'https://ptdwebservice.putiandi.com/',
                 changeOrigin: true,
                 pathRewrite: {
-                    '^/api': ''
+                    '^/appServer': ''
                 }
             }
         },
