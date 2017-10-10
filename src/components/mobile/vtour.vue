@@ -127,7 +127,6 @@ export default {
                     }
                 });
             })
-
         },
         floorInit() {
             this.$nextTick(function () {
