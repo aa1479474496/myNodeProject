@@ -2,7 +2,7 @@
     <div class="index-mask" style="display:block;">
         <div class="vtour-content" ontouchmove="return false;">
             <div class="vtour-header"><a href="javascript:history.back(-1);" class="vtour-back"><i class="vtour-back-icon"></i></a>{{pageTitle}}</div>
-            <div class="swipe-box" style="width:100%;">
+            <div class="swipe-box">
                 <template v-if="!!qjList.length">
                     <div class="swipe-content pos-rel" v-show="displayName=='overall'">
                         <a :href='qjList[0].vLink' class="overall-link"></a>

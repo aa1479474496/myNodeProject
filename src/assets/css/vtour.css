@@ -52,7 +52,10 @@
     height: 44px;
     line-height: 44px;
 }
-
+.swipe-box {
+    width: 100%;
+    margin-top: -30px;
+}
 .vtour-bar {
     position: absolute;
     z-index: 2;
