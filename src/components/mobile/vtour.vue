@@ -16,7 +16,7 @@
                         <img :src="imageUrl + threeDList[0].vSrc" class="vtour-swipe-img blur-img" alt="">
                     </div>
                 </template>
-    
+     
                 <template v-if="!!hpList.length">
                     <div class="swipe-content" v-show="displayName=='hp'">
                         <a :href='hpList[0].vLink' class="hp-link"></a>
