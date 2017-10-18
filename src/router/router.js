@@ -74,6 +74,24 @@ const routes = [{
     component(resolve) {
         require(['./../components/mobile/vtour.vue'], resolve)
     }
+}, {
+    path: '/betterScroll',
+    name: 'betterScroll',
+    component(resolve) {
+        require(['./../components/betterScroll/betterScroll.vue'], resolve)
+    }
+}, {
+    path: '/myscorll',
+    name: 'myscorll',
+    component(resolve) {
+        require(['./../components/betterScroll/myscorll.vue'], resolve)
+    }
+}, {
+    path: '/city',
+    name: 'city',
+    component(resolve) {
+        require(['./../components/betterScroll/city.vue'], resolve)
+    }
 }]
 
 
