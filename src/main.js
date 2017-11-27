@@ -7,7 +7,10 @@ import 'element-ui/lib/theme-default/index.css'
 import router from './router/router.js'
 
 import reClass from './components/common/directive.js'
-import mckAll from './components/common/mobileEntrust.js'
+// import mckAll from './components/common/mobileEntrust.js'
+
+
+import {mobileck} from './components/common/mobileEntrust.js'
 
 import 'bootstrap'
 import './assets/css/bootstrap.min.css'
@@ -17,7 +20,7 @@ import api from './api/index'
 
 Vue.use(ElementUI)
 Vue.use(reClass)
-Vue.use(mckAll)
+Vue.use(mobileck)
 
 Vue.prototype.api = api;
 

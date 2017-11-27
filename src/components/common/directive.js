@@ -148,4 +148,6 @@ function removeClass(obj, cls) {
 
 
 
-module.exports = reClass;
+// module.exports = reClass;
+
+export default reClass;

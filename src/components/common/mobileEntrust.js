@@ -120,4 +120,7 @@ function removeClass(obj, cls) {
 
 
 
-module.exports = mobileck;
+// module.exports = mobileck;
+// module.exports = mobileck;
+
+export {mobileck};
