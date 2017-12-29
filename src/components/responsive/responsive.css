@@ -1,0 +1,48 @@
+.mt10 {
+  margin-top: 10px;
+}
+.sider {
+  width: 224px;
+  padding: 10px;
+  background: #292929;
+  position: absolute;
+  overflow: visible;
+  padding-bottom: 24px;
+  height: 100vh;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.01);
+  box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.01);
+  color: #999;
+}
+
+.main {
+  margin-left: 224px;
+  padding: 20px;
+  overflow: auto;
+  height: 100vh;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.main.withnavbar {
+  margin-left: 0;
+}
+.sider .hasChildren,
+.sider .nav li a{
+  padding: 10px 15px;
+  color: #fff;
+  cursor: pointer;
+}
+.sider .nav .children li a {
+  display: block;
+    padding: 5px 15px 5px 25px;
+    color: #aaa;
+}
+.sider .hasChildren:hover,
+.sider .nav li a:hover {
+  color: #b89f7a;
+  text-decoration: none;
+  background: none;
+}

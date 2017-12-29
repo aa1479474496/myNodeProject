@@ -94,6 +94,20 @@ const routes = [{
   }
 
 }, {
+  path: '/responsive',
+  name: 'responsive',
+  component(resolve) {
+    require(['@/components/responsive/responsive.vue'], resolve)
+  }
+
+}, {
+  path: '/testresponsive',
+  name: 'testresponsive',
+  component(resolve) {
+    require(['@/components/responsive/test.vue'], resolve)
+  }
+
+}, {
   path: '/*',
   component(resolve) {
     require(['./../components/404.vue'], resolve)
