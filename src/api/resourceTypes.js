@@ -5,5 +5,6 @@ export default {
     LOGIN: '/users/login',
     UPLOAD: '/users/upload',
     HEADPORTRAIT: '/users/headPortrait',
-    COMMON_VTOUR_DATA: 'v2/common/vtour'
+    COMMON_VTOUR_DATA: 'v2/common/vtour',
+    TEST_PROXY:'/proxy'
 }

@@ -6,5 +6,7 @@ module.exports = {
     //图片上传
     UPLOAD: '/upload',
     //上传头像
-    HEADPORTRAIT: '/headPortrait'
+    HEADPORTRAIT: '/headPortrait',
+    //测试代理接口
+    PROXY: '/proxy'
 }

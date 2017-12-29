@@ -27,24 +27,24 @@ module.exports = {
         autoOpenBrowser: true,
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
-        // proxyTable: {
-        //     '/api': {
-        //         target: 'http://localhost:3030',
-        //         changeOrigin: true,
-        //         pathRewrite: {
-        //             '^/api': ''
-        //         }
-        //     }
-        // },
-         proxyTable: {
-            '/appServer': {
-                 target: 'https://ptdwebservice.putiandi.com/',
+        proxyTable: {
+            '/api': {
+                target: 'http://localhost:3030',
                 changeOrigin: true,
                 pathRewrite: {
-                    '^/appServer': ''
+                    '^/api': ''
                 }
             }
         },
+        //  proxyTable: {
+        //     '/appServer': {
+        //          target: 'https://ptdwebservice.putiandi.com/',
+        //         changeOrigin: true,
+        //         pathRewrite: {
+        //             '^/appServer': ''
+        //         }
+        //     }
+        // },
         // CSS Sourcemaps off by default because relative paths are "buggy"
         // with this option, according to the CSS-Loader README
         // (https://github.com/webpack/css-loader#sourcemaps)

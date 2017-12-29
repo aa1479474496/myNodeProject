@@ -25,5 +25,8 @@ export default {
     },
     getVtourData(data) {
         return Vue.axios.get(res.COMMON_VTOUR_DATA, { params: data })
+    },
+    testProxy() {
+        return Vue.axios.get(res.TEST_PROXY)
     }
 }

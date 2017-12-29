@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 let instance = axios.create({
-    // baseURL: '/api/'
-    baseURL: '/appServer/'
+    baseURL: '/api/'
+    // baseURL: '/appServer/'
 })
 instance.interceptors.response.use((res) => {
     return res.data;

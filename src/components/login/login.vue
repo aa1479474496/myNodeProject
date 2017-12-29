@@ -19,6 +19,8 @@
             </div>
         </div>
         <div class="sign-button mt18" v-ckAll:check-form>登录</div>
+        <router-link :to="{path: '/flex'}" tag="div">去flex页面</router-link>
+        <!-- <div class="sign-button mt18">登录</div> -->
     
         <!--<ul id="example-2">
             <template v-for="(item, index) in items">
