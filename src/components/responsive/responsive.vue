@@ -51,6 +51,7 @@
     </div>
     <div class="main" :class="[isNavbar ? 'withnavbar' : '']">
       main
+      <t></t>
     </div>
   </div>
 </template>
@@ -58,6 +59,9 @@
 <script>
   import './responsive.css'
   export default {
+    components: {
+      t: require('./t')
+    },
     data() {
       return {
         isNavbar: document.body.clientWidth < 769,

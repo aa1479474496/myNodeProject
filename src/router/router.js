@@ -108,6 +108,13 @@ const routes = [{
   }
 
 }, {
+  path: '/eleResponsive',
+  name: 'eleResponsive',
+  component(resolve) {
+    require(['@/components/responsive/eleResponsive.vue'], resolve)
+  }
+
+}, {
   path: '/*',
   component(resolve) {
     require(['./../components/404.vue'], resolve)
