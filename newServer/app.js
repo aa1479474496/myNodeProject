@@ -27,6 +27,8 @@ app.all('*', function(req, res, next) {
 mongoose.Promise = global.Promise;
 mongoose.connect(config.database);
 
+require('./models')
+
 app.listen(port, () => {
     console.log('listening on port : ' + port);
 })
