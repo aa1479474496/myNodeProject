@@ -1,17 +1,17 @@
-// var a = 7 && 0;
-// var b = 0 && 7;
-// var c = 7 && 1;
+var a = 7 && 0;
+var b = 0 && 7;
+var c = 7 && 1;
 
-// console.log(a ,b ,c);
+console.log(a ,b ,c);
 
 
-// function test(a) {
-//   console.log(a);
-//   function a() {}
-//   var a = 5;
-//   console.log(a);
-// }
-// test(8);
+function test(a) {
+  console.log(a);
+  function a() {}
+  var a = 5;
+  console.log(a);
+}
+test(8);
 
 
 // let arr = [4,5,6,7,8]
@@ -233,5 +233,55 @@
 //     }    
 //   }
 // }
+
+
+// var plugin =(function(){
+//     function _firstFunc(str){
+//         console.log(str);
+//     };
+//     return{
+//         firstFunc: _firstFunc,
+//     };
+// })();
+
+// plugin.firstFunc(123)
+
+// (function(){
+//   //定义一些默认参数
+//   var _options={
+//       default_word:"default hello"                
+//   }
+
+//   //定义一些api
+//   var _plugin_api = {
+//       firstFunc:function(str = _options.default_word){
+//           console.log(str);
+//           return this;//返回当前方法
+//       },
+//       secondFunc:function(){
+//         console.log("secondFunc");
+//           return this;//返回当前方法
+//       }
+//   }
+//   //这里确定了插件的名称
+//   console.log(this);
+//   this.CJPlugin = _plugin_api;
+// })();
+
+// CJPlugin.firstFunc("hello");//hello
+// CJPlugin.firstFunc();//default hello
+// CJPlugin.secondFunc();//secondFunc
+
+
+// var name = 'john';
+// var name;
+// console.log(name);
+
+
+console.log(name);
+function name() {
+  return 1
+}
+var name = 2
 
 
