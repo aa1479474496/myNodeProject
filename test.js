@@ -1,17 +1,17 @@
-var a = 7 && 0;
-var b = 0 && 7;
-var c = 7 && 1;
+// var a = 7 && 0;
+// var b = 0 && 7;
+// var c = 7 && 1;
 
-console.log(a ,b ,c);
+// console.log(a ,b ,c);
 
 
-function test(a) {
-  console.log(a);
-  function a() {}
-  var a = 5;
-  console.log(a);
-}
-test(8);
+// function test(a) {
+//   console.log(a);
+//   function a() {}
+//   var a = 5;
+//   console.log(a);
+// }
+// test(8);
 
 
 // let arr = [4,5,6,7,8]
@@ -278,10 +278,11 @@ test(8);
 // console.log(name);
 
 
-console.log(name);
-function name() {
-  return 1
-}
-var name = 2
+// console.log(name);
+// function name() {
+//   return 1
+// }
+// var name = 2
+
 
 
